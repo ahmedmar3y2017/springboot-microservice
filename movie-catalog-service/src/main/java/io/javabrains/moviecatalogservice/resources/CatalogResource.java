@@ -32,7 +32,7 @@ public class CatalogResource {
     @Autowired
     MovieRatingService movieRatingService;
 
-
+    @HystrixCommand
     @RequestMapping("/{userId}")
     public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
 
